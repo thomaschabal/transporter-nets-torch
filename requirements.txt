@@ -1,0 +1,14 @@
+absl-py>=0.7.0
+gym==0.17.3
+numpy==1.18.5
+pybullet>=3.0.4
+matplotlib>=3.1.1
+opencv-python>=4.1.2.30
+meshcat>=0.0.18
+scipy==1.4.1
+scikit-image>=0.17.2
+transforms3d==0.3.1
+tensorboardX>=2.2
+torch==1.7.1
+torchvision==0.8.2
+einops
