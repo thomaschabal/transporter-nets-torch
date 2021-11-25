@@ -94,10 +94,9 @@ python -m tensorboard.main --logdir=logs  # Open the browser to where it tells y
 
 ## Datasets and Pre-Trained Models
 
-Download generated train and test datasets (as well as pre-trained Tensorflow models) from the original authors of the paper:
+Download generated train and test datasets from the original authors of the paper:
 
 ```shell
-wget https://storage.googleapis.com/ravens-assets/checkpoints.zip
 wget https://storage.googleapis.com/ravens-assets/block-insertion.zip
 wget https://storage.googleapis.com/ravens-assets/place-red-in-green.zip
 wget https://storage.googleapis.com/ravens-assets/towers-of-hanoi.zip
@@ -110,10 +109,10 @@ wget https://storage.googleapis.com/ravens-assets/manipulating-rope.zip
 wget https://storage.googleapis.com/ravens-assets/sweeping-piles.zip
 ```
 
-### **/!\ PyTorch weights should arrive soon.**
-
 The MDP formulation for each task uses transitions with the following structure:
 - **Observations:** raw RGB-D images and camera parameters (pose and intrinsics).
 - **Actions:** a primitive function (to be called by the robot) and parameters.
 - **Rewards:** total sum of rewards for a successful episode should be =1.
 - **Info:** 6D poses, sizes, and colors of objects.
+
+### **/!\ PyTorch weights should arrive soon.**
