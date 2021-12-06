@@ -92,7 +92,7 @@ python ravens_torch/plot.py --disp=True --task=block-insertion --agent=transport
 python -m tensorboard.main --logdir=logs  # Open the browser to where it tells you to.
 ```
 
-## Datasets and Pre-Trained Models
+## Datasets
 
 Download generated train and test datasets from the original authors of the paper:
 
@@ -115,4 +115,13 @@ The MDP formulation for each task uses transitions with the following structure:
 - **Rewards:** total sum of rewards for a successful episode should be =1.
 - **Info:** 6D poses, sizes, and colors of objects.
 
-### **/!\ PyTorch weights should arrive soon.**
+## Pre-Trained Models
+
+1. Download [this archive](https://drive.google.com/file/d/11Lst1KwCL6oT64wto9fI6vZ3oceR-q3c/view?usp=sharing).
+2. Extract the weights:
+```shell
+tar -xvf checkpoints.tar.gz
+```
+3. Place the weights in the folder `$WORK/data/checkpoints`
+
+You should now be able to run tests as in __Step 3__ above.
