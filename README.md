@@ -125,3 +125,44 @@ tar -xvf checkpoints.tar.gz
 3. Place the weights in the folder `$WORK/data/checkpoints`
 
 You should now be able to run tests as in __Step 3__ above.
+
+## Transporter Evaluations
+
+The following tables report success rates of Transporters trained for 40000 steps and evaluated on the 100 demos from the test set. 
+
+The cumulative rewards consists in summing the final reward of each evaluation, while the binary rewards relate to 1 if the demo was completed and 0 otherwise.
+
+The evaluations are conducted on models trained respectively on 1, 10, 100 and 1000 demos from the train set.
+
+These results were obtained after testing models with `ravens_torch/test.py` and computing the success rates with `ravens_torch/read_evaluation.py`.
+
+### Success rate (%) with cumulative rewards
+
+
+| Task                | 1 demo | 10 demos | 100 demos | 1000 demos |
+|:-------------------:|:----:|:----:|:----:|:----:|
+| Align-box-corner    | 14   | 58   | 94   | 100  |
+| Assembling-kits     | 17.6 | 60   | 92.4 | 90.8 |
+| Block-insertion     | 98   | 99   | 100  | 100  |
+| Manipulating-rope   | 4.9  | 70.7 | 90.4 | 95.1 |
+| Packing-boxes       | 92.3 | 96.8 | 99.4 | 99.4 |
+| Palletizing-boxes   | 73.8 | 97.7 | 98.9 | 99.9 |
+| Place-red-in-green  | 54   | 100  | 99   | 100  |
+| Stack-block-pyramid | 9.7  | 66.2 | 91.8 | 96.8 |
+| Sweeping-piles      | 97.5 | 99.4 | 99.5 | 99.7 |
+| Towers-of-Hanoi     | 60.9 | 92.9 | 99.6 | 100  |
+
+### Success rate (%) with binary rewards after 40000 training steps
+
+| Task                | 1 demo | 10 demos | 100 demos | 1000 demos |
+|:-------------------:|:----:|:----:|:----:|:----:|
+| Align-box-corner    | 14   | 58   | 94   | 100  |
+| Assembling-kits     | 0    | 9    | 80   | 80   |
+| Block-insertion     | 98   | 99   | 100  | 100  |
+| Manipulating-rope   | 0    | 55   | 78   | 84   |
+| Packing-boxes       | 53   | 85   | 97   | 98   |
+| Palletizing-boxes   | 4    | 84   | 91   | 99   |
+| Place-red-in-green  | 45   | 100  | 99   | 100  |
+| Stack-block-pyramid | 0    | 39   | 85   | 88   |
+| Sweeping-piles      | 66   | 96   | 97   | 97   |
+| Towers-of-Hanoi     | 47   | 90   | 99   | 100  |
