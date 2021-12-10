@@ -15,7 +15,7 @@ from ravens_torch.environments.environment import Environment
 
 flags.DEFINE_string('assets_root', ENV_ASSETS_DIR, '')
 flags.DEFINE_string('data_dir', EXPERIMENTS_DIR, '')
-flags.DEFINE_bool('disp', True, '')
+flags.DEFINE_bool('disp', False, '')
 flags.DEFINE_bool('shared_memory', False, '')
 flags.DEFINE_string('task', 'block-insertion', '')
 flags.DEFINE_string('mode', 'test', '')
